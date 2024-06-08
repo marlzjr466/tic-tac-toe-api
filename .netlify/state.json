@@ -1,0 +1,19 @@
+{
+	"geolocation": {
+		"data": {
+			"city": "Lahug",
+			"country": {
+				"code": "PH",
+				"name": "Philippines"
+			},
+			"subdivision": {
+				"code": "07",
+				"name": "Central Visayas"
+			},
+			"timezone": "Asia/Manila",
+			"latitude": 10.3387,
+			"longitude": 123.8998
+		},
+		"timestamp": 1717878186821
+	}
+}
