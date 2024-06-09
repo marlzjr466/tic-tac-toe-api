@@ -9,7 +9,7 @@ class Mongoose {
 
   start () {
     console.log('started connecting to mongo db...')
-    mongoose.connect(this.url)
+    mongoose.connect(this.url, this.options)
     this.db = mongoose.connection
     this.db.on('error', error => console.log('db connection error:', error))
     this.db.once('open', () => console.log('connected to database `tictactoe`'))
