@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 class Mongoose {
   constructor () {
-    this.url = process.env.MONGODB_URI || 'mongodb+srv://marlzjr15:Langomez466!@cluster0.12o2hb9.mongodb.net/'
+    this.url = 'mongodb+srv://marlzjr15:Langomez466!@cluster0.12o2hb9.mongodb.net/'
     this.options = { useNewUrlParser: true }
     this.db = null
   }
