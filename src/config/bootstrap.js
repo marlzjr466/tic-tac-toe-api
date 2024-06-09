@@ -2,7 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 
-const handler = require('@/resources/handler')
+const handler = require('../resources/handler')
 
 class Bootstrap {
   constructor () {

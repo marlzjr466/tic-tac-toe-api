@@ -1,6 +1,4 @@
-require('module-alias/register')
-
 const serverless = require('serverless-http')
-const app = require('@app')
+const app = require('../src')
 
 module.exports.handler = serverless(app)
