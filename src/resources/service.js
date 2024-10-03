@@ -58,12 +58,26 @@ module.exports = {
         { headers }
       );
 
+      // extract referral code
+      const [_, code] = res.data.referral_link.link.split('=');
+
+      // register as customer
+      const ctxResponse = await axios.post(
+        `${url}/customers/?override_max_cookie_time-false`,
+        {
+          customer_id: registerResponse.data.id,
+          referral_code: code,
+        },
+        { headers }
+      );
+
       const info = res.data;
+      info.referral_code = code
       info.register_response = registerResponse.data;
+      info.customer_response = ctxResponse.data;
 
       return info
     } catch (error) {
-      console.log('-------->', error)
       throw error
     }
   }
