@@ -35,6 +35,22 @@ router
           message: error.message
         })
     }
+  }),
+
+  post('/init', async (req, res) => {
+    try {
+      const result = await service.init({ user: req.body })
+
+      res.status(201)
+        .json(result)
+    } catch (error) {
+      console.log('post error:', error)
+
+      res.status(400)
+        .json({
+          message: error.message
+        })
+    }
   })
 
 module.exports = router
