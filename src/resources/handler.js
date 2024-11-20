@@ -35,9 +35,9 @@ router
           message: error.message
         })
     }
-  }),
+  })
 
-  post('/init', async (req, res) => {
+  .post('/init', async (req, res) => {
     try {
       const result = await service.init({ user: req.body })
 
